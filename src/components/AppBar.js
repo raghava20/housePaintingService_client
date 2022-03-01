@@ -30,7 +30,7 @@ export default function AppBarLayout() {
                 alignItems: 'center',
             }} >
                 <Link to="/" style={{ textDecoration: "none" }}>
-                    <Typography variant="h6" nowarp="true" color="secondary" sx={{ fontSize: { xs: 18, sm: 24 } }}>
+                    <Typography variant="h6" nowarp="true" color="primary" sx={{ fontSize: { xs: 18, sm: 24 } }}>
                         House Painting
                     </Typography>
                 </Link>
