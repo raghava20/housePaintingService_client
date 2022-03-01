@@ -1,11 +1,15 @@
 import React from 'react';
 import { Link, useNavigate } from "react-router-dom"
-import { useDispatch, useSelector } from "react-redux";
 
+// redux
+import { useDispatch, useSelector } from "react-redux";
+import { signupUser } from '../../redux/actions/authActions'
+
+// material ui
 import CircularProgress from '@mui/material/CircularProgress';
 import { Grid, Typography, TextField, Button } from '@mui/material';
 
-import { signupUser } from '../../redux/actions/authActions'
+// custom hook
 import useForm from '../../hooks/useForm';
 import logo from "../../images/logo.jpg"
 
@@ -43,6 +47,7 @@ export default function Signup() {
     let firstNameEmptyError = null;
     let lastNameEmptyError = null;
 
+    // checking backend errors
     if (errors) {
         if (typeof errors !== "string") {
             for (let i = 0; i < errors.length; i++) {

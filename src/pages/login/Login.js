@@ -1,12 +1,18 @@
 import React from 'react';
 import { Link, useNavigate } from "react-router-dom"
-import { useDispatch, useSelector } from "react-redux";
 
+// redux
+import { useDispatch, useSelector } from "react-redux";
+import { loginAction } from '../../redux/actions/authActions'
+
+// material ui
 import CircularProgress from '@mui/material/CircularProgress';
 import { Grid, Typography, TextField, Button } from '@mui/material';
 
-import { loginAction } from '../../redux/actions/authActions'
+// custom hook
 import useForm from '../../hooks/useForm';
+
+// logo image
 import logo from "../../images/logo.jpg"
 
 export default function Login() {
@@ -51,7 +57,6 @@ export default function Login() {
                 direction="column"
                 justifyContent="center"
                 textAlign="center"
-
             >
                 <img
                     src={logo}

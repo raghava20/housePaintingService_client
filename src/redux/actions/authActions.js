@@ -13,7 +13,7 @@ import {
 
 import API_URL from "../../utils/API_URL";
 
-
+// signup the user
 export const signupUser = (newUserData, navigate) => (dispatch) => {
     dispatch({ type: LOADING_UI });
     API_URL
@@ -39,6 +39,7 @@ export const signupUser = (newUserData, navigate) => (dispatch) => {
         });
 };
 
+// login the user
 export const loginAction = (userData, navigate) => (dispatch) => {
     dispatch({ type: LOADING_UI });
     API_URL
@@ -65,7 +66,7 @@ export const loginAction = (userData, navigate) => (dispatch) => {
         });
 };
 
-
+// get all details of the loggedin user
 export const getUserData = () => (dispatch) => {
     dispatch({ type: LOADING_USER });
     API_URL
@@ -79,6 +80,7 @@ export const getUserData = () => (dispatch) => {
         .catch((err) => console.log(err));
 };
 
+// logout the user
 export const logoutAction = (navigate) => (dispatch) => {
     localStorage.removeItem("jwt");
     delete API_URL.defaults.headers.common["x-auth-token"];

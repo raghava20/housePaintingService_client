@@ -1,14 +1,16 @@
 import React from 'react';
 import { useDispatch } from "react-redux"
 
+// mui
 import DeleteIcon from '@mui/icons-material/Delete';
-
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-
 import Typography from '@mui/material/Typography';
 
+// redux
 import { deleteCartItem } from "../redux/actions/dataActions"
+
+// helper func
 import MyButton from "../utils/MyButton"
 
 

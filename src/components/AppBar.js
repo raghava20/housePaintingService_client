@@ -2,12 +2,14 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom"
 
+// redux 
+import { logoutAction } from "../redux/actions/authActions"
 
+// mui 
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import { logoutAction } from "../redux/actions/authActions"
 import { Box } from "@mui/material";
 import LogoutIcon from '@mui/icons-material/Logout';
 import Tooltip from '@mui/material/Tooltip';

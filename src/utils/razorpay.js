@@ -38,10 +38,10 @@ export const razorpay = async (totalPrice, firstName, lastName, email, mobile, d
         name: 'House Painting Service',
         description: 'Your order has been created',
         image: image,
-        handler: function (response) {
-            alert(response.razorpay_payment_id)
-            alert(response.razorpay_order_id)
-            alert(response.razorpay_signature)
+        handler: function (response) {                                      //run after the successfull payment
+            alert("Your payment Id: ", response.razorpay_payment_id)
+            alert("Your order Id: ", response.razorpay_order_id)
+            alert("Your receipt: ", response.razorpay_signature)
             dispatch(placeOrder());
         },
         prefill: {

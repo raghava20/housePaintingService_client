@@ -65,6 +65,7 @@ export const deleteCartItem = (itemData) => (dispatch) => {
         });
 };
 
+// add address to the user details
 export const addAddress = (userData) => (dispatch) => {
     API_URL
         .post("/user/address", userData)
@@ -86,6 +87,7 @@ export const addAddress = (userData) => (dispatch) => {
         });
 };
 
+// book the order
 export const placeOrder = (navigate) => (dispatch) => {
     API_URL
         .post("/order")
@@ -98,6 +100,7 @@ export const placeOrder = (navigate) => (dispatch) => {
         });
 };
 
+// get all the booked orders
 export const getOrders = () => (dispatch) => {
     dispatch({ type: LOADING_DATA });
     API_URL
@@ -112,16 +115,3 @@ export const getOrders = () => (dispatch) => {
             console.log(err.response);
         });
 };
-
-export const postRazorpay = (price) => (dispatch) => {
-    API_URL
-        .post("/razorpay", price)
-        .then((res) => {
-            dispatch({
-                type: ADD_RAZORPAY,
-                payload: res.data
-            })
-        }).catch((err) => {
-            console.log(err.response);
-        });
-}

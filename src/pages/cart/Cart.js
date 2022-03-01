@@ -1,14 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
+// redux
 import { useDispatch, useSelector } from "react-redux"
-import { getCart, addAddress, postRazorpay } from "../../redux/actions/dataActions"
-import Spinner from '../../utils/spinner/spinner';
+import { getCart, addAddress } from "../../redux/actions/dataActions"
+
+// material ui
 import { Grid, Typography, Paper, TextField, Button } from '@mui/material';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
-import MyButton from '../../utils/MyButton';
+
+// validation func
 import * as yup from "yup"
 import { useFormik } from "formik"
+
+// component
 import CartItem from '../../components/CartItem';
+
+// helper func
+import Spinner from '../../utils/spinner/spinner';
+import MyButton from '../../utils/MyButton';
 import { razorpay } from '../../utils/razorpay';
 
 export default function Cart() {

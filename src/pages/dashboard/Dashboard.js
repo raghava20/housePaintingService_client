@@ -1,10 +1,19 @@
-import { Button, Typography } from '@mui/material'
 import React, { useEffect } from 'react'
-import { makeStyles } from '@mui/styles';
-import image from "../../images/landingimage.jpg"
 import { Link } from 'react-router-dom';
+
+// material ui
+import { makeStyles } from '@mui/styles';
+import { Button, Typography } from '@mui/material'
+
+// redux
 import { useSelector, useDispatch } from "react-redux";
+import { getUserData } from '../../redux/actions/authActions';
+
+// components
 import Items from '../../components/Items';
+
+// images
+import image from "../../images/landingimage.jpg"
 import img1 from "../../images/img1.jpg";
 import img2 from "../../images/img2.jpg";
 import img3 from "../../images/img3.jpg";
@@ -13,7 +22,6 @@ import img5 from "../../images/img5.jpg";
 import img6 from "../../images/img6.jpg";
 import img7 from "../../images/img7.jpg";
 import img8 from "../../images/img8.jpg";
-import { getUserData } from '../../redux/actions/authActions';
 
 const useStyles = makeStyles((theme) => ({
     presentation: {
