@@ -13,6 +13,10 @@ import Button from '@mui/material/Button';
 import { Box } from "@mui/material";
 import LogoutIcon from '@mui/icons-material/Logout';
 import Tooltip from '@mui/material/Tooltip';
+import { purple } from '@mui/material/colors';
+
+const color = purple[900];
+
 
 export default function AppBarLayout() {
     const dispatch = useDispatch()
@@ -30,7 +34,7 @@ export default function AppBarLayout() {
                 alignItems: 'center',
             }} >
                 <Link to="/" style={{ textDecoration: "none" }}>
-                    <Typography variant="h6" nowarp="true" color="primary" sx={{ fontSize: { xs: 18, sm: 24 } }}>
+                    <Typography variant="h6" nowarp="true" color={color} sx={{ fontSize: { xs: 18, sm: 24 } }}>
                         House Painting
                     </Typography>
                 </Link>
