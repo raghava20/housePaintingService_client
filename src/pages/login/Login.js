@@ -8,6 +8,8 @@ import { loginAction } from '../../redux/actions/authActions'
 // material ui
 import CircularProgress from '@mui/material/CircularProgress';
 import { Grid, Typography, TextField, Button } from '@mui/material';
+import EmailIcon from '@mui/icons-material/Email';
+import LockOpenIcon from '@mui/icons-material/LockOpen';
 
 // custom hook
 import useForm from '../../hooks/useForm';
@@ -129,6 +131,11 @@ export default function Login() {
                         Don't have an account ? sign up <Link to="/signup">here</Link>
                     </small>
                 </form>
+                <p>
+                    Demo Credentials: &nbsp;
+                    <small><EmailIcon fontSize="small" style={{ position: 'relative', top: 5 }} /></small>demo@gmail.com &nbsp;
+                    <small><LockOpenIcon fontSize="small" style={{ position: 'relative', top: 5 }} /></small>password
+                </p>
             </Grid>
             <Grid item sm />
         </Grid>
